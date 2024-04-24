@@ -11,8 +11,6 @@ pipeline {
             for (element in list1) {
               println "my element is ${element}"
             }
-            for i in list1:
-              print(i)
         }
       }
     }
