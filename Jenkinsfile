@@ -1,7 +1,7 @@
 pipeline {
     agent any
     enviornment {
-        JAVA_HOME ='/usr/bin/java"
+        JAVA_HOME = "/usr/bin/java"
     }
     parameters {
       choice choices: ['dev', 'sit', 'pt', 'prod'], name: 'ENV'
