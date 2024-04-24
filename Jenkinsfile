@@ -1,4 +1,4 @@
-pipelline {
+pipeline {
     agent any
     stages {
       stage("welcome note") {
