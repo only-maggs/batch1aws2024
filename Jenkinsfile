@@ -1,24 +1,19 @@
 pipeline {
-    agent any
-    environment {
-        JAVA_HOME = "/usr/bin/java"
-    }
-    parameters {
-      choice choices: ['dev', 'sit', 'pt', 'prod'], name: 'ENV'
-   }
-    stages {
-      stage("welcome note") {
-        steps {
-          script {
-            println "Welcome to jenkins pipeline tutorial"
-            println "my workspace is ${WORKSPACE}"
-            println "my build no is ${BUILD_NUMBER}"
-            println "my env variable is ${env.JAVA_HOMES}"
-
-            println "my env value is ${params.ENV}"
-              
+  agent any
+  stages {
+    stage('working with condition') {
+      steps {
+        script {
+          a=10
+          b=20
+          if (a>b) {
+            println "a value is big ${a}"
+          }  
+          else {
+            println "b value is big ${b}"
           }
         }
       }
     }
+  }
 }
