@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviornment {
+    environment {
         JAVA_HOME = "/usr/bin/java"
     }
     parameters {
