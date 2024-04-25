@@ -1,14 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('working with condition') {
+    stage('working with file condition') {
       steps {
         script {
-          i=1
-          while (i <=10) {
-            println "i value is ${i}"
-            i=i+1
-          }  
+          File file =  new File("/tmp/testdata.txt")
+          for(line in file.readLines()) {
+            println "your line is ${lines}" 
+          } 
         }
       }
     }
